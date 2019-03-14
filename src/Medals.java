@@ -1,4 +1,4 @@
-package com.company;
+//package com.company;
 
 public class Medals {
 
@@ -94,6 +94,17 @@ public class Medals {
 
     public int[] calculateColumnTotals() {
         //compute column totals i.e. total number of medals for each medal type
-        return null;
+        int [] medalTotals = new int[MEDALS];
+        for(int i = 0; i < MEDALS; i++)
+        {
+            medalTotals[i] = 0;
+
+            for (int j = 0; j < COUNTRIES; j++)
+            {
+                medalTotals[i] += counts[j][i];
+            }
+        }
+
+        return medalTotals;
     }
 }
