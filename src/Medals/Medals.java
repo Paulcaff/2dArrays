@@ -1,4 +1,4 @@
-//package com.company;
+package Medals;//package com.company;
 
 public class Medals {
 

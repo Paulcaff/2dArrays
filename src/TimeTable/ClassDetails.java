@@ -29,7 +29,7 @@ public class ClassDetails {
 
 
     public String toString() {
-        return " name = " + name +" room = " + room;
+        return  name +" " + room;
     }
 }
 

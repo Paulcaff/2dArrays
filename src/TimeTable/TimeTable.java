@@ -11,21 +11,20 @@ public class TimeTable {
                     "Tuesday",
                     "Wednesday",
                     "Thursday",
-                    "Friday",
-                    "Saturday",
-                    "Sunday"
+                    "Friday"
+
             };
     private String [] time =
             {
+                    "9 oclock",
+                    "10 oclock",
+                    "11 oclock",
+                    "12 oclock",
                     "1 oclock",
                     "2 oclock",
                     "3 oclock",
                     "4 oclock",
-                    "5 oclock",
-                    "6 oclock",
-                    "7 oclock",
-                    "8 oclock",
-                    "9 oclock"
+                    "5 oclock"
             };
 
     private ClassDetails[][] grid;
@@ -44,25 +43,31 @@ public class TimeTable {
         // display the grid
         // Print headings
 
-        System.out.printf("%15s", "");
-        for (int i = 0; i < days.length; i++){
-            System.out.printf("%15s", days[i]);
+        System.out.printf("%30s", "");
+        for (int i = 0; i < time.length; i++){
+            System.out.printf("%30s", time[i]);
         }
         System.out.println();
 
+
         // Print countries, counts, and row totals
-        for (int i = 0; i < time.length; i++)
+        for (int i = 0; i < days.length; i++)
         {
             // Process the ith row
-            System.out.printf("%15s", time[i]);
+            System.out.printf("%30s", days[i]);
+
 
             // Print each row element and update the row total
             for (int j = 0; j < HOURS; j++)
             {
-                System.out.printf("%15s", grid[i][j]);
+                System.out.printf("%30s", grid[i][j]);
+
 
             }
+            System.out.println();
+
         }
+
     }
 
 //    public TimeTable.TimeTable.ClassDetails get(int day, int hour) {
